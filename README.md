@@ -23,16 +23,19 @@ View Live Demo (https://aylivingthesimplelife.netlify.app/)
 Creating flexible layouts that adapt to different screen sizes
 Building navigation bars with proper spacing
 Aligning content vertically and horizontally
+
 2. Responsive Design
 
 Using media queries for different breakpoints (768px, 480px)
 Mobile-first approach to styling
 Making images scale properly with object-fit
+
 3. Design System
 
 Consistent color scheme (#143774, #1792D2, #707070)
 Typography pairing (Lora for headings, Ubuntu for body text)
 Reusable component patterns
+
 4. Multiple Page Consistency
 
 Shared CSS file across all pages
