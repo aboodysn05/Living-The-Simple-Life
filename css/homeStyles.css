@@ -1,16 +1,16 @@
-/* Layout */
-
+/* ===== RESET & BASE STYLES ===== */
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
 }
 
+/* ===== HEADER & FOOTER ===== */
 header, main, footer {
   width: 100%;
 }
 
 header, footer {
-  padding: 3.5em 0em;
+  padding: 3.5em 0;
 }
 
 header {
@@ -36,9 +36,35 @@ footer p:last-child {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* ===== NAVIGATION ===== */
+.container-nav {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
 .header-title {
   width: 25%;
   text-align: center;
+}
+
+.header-title h1 {
+  color: #143774;
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0 auto 0.1em;
+}
+
+.header-title p {
+  color: #1792D2;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -72,14 +98,12 @@ footer p:last-child {
   color: #1792D2;
 }
 
-.container-nav {
-  width: 75%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
+[aria-current="page"] {
+  border-bottom: 2px solid #707070;
+  padding-bottom: 0.25em;
 }
 
+/* ===== MAIN LAYOUT ===== */
 .container {
   display: flex;
   width: 75%;
@@ -99,31 +123,161 @@ footer p:last-child {
   gap: 2em;
 }
 
+/* ===== ARTICLES ===== */
+/* Special Article (first one) */
+.special-article {
+  margin-bottom: 2em;
+}
+
+.crop-special-image {
+  width: 100%;
+  height: 308px;
+  overflow: hidden;
+}
+
+.crop-special-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Normal Articles */
 .normal-article {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   gap: 2em;
   align-items: flex-start;
-  margin: 0 auto;
 }
 
 .normal-article-main {
   width: 65%;
-  order: 2;
 }
 
 .normal-article-secondary {
   width: 30%;
   display: flex;
   flex-direction: column;
-  order: 1;
 }
 
+.crop-normal-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.crop-normal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.normal-article-secondary .post-date {
+  margin: 1em 0 0;
+  order: 2;
+}
+
+/* Article Typography */
+.post-date {
+  color: #707070;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 2em 0 1em;
+}
+
+.special-article .post-date {
+  margin-top: 1em;
+}
+
+.post-title {
+  color: #143774;
+  font-size: 1.5rem;
+  font-family: "Lora", serif;
+  font-weight: normal;
+  margin: 0.5em 0;
+}
+
+.normal-article .post-title {
+  margin-top: 0;
+}
+
+.post-description {
+  color: #707070;
+  font-size: 1.1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  margin: 1.5em 0;
+}
+
+.post-description a {
+  color: #1792D2;
+  text-decoration: none;
+}
+
+.post-description a:hover {
+  text-decoration: underline;
+}
+
+.decorations-introduction {
+  font-weight: bold;
+  color: #143774;
+}
+
+.continue-reading {
+  color: #1792D2;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.continue-reading:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 3em 0;
+  border: 0;
+  border-top: 1px solid #707070;
+  opacity: 0.3;
+}
+
+/* ===== RIGHT COLUMN CARDS ===== */
 .about-me-card, .recent-posts-card {
   background-color: #F8F8F8;
   padding: 1.5em;
   border: 20px solid #EBEBEB;
+}
+
+.about-me-title {
+  color: #143774;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  font-weight: 900;
+  margin: 0 0 1.5em;
+  font-size: 1.1rem;
+}
+
+.about-me-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.about-me-paragraph {
+  color: #143774;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  margin: 1.5em 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .recent-posts-card h3 {
@@ -132,7 +286,7 @@ footer p:last-child {
   text-transform: uppercase;
   letter-spacing: 3.6px;
   font-weight: 900;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.5em;
   font-size: 1.1rem;
 }
 
@@ -165,181 +319,15 @@ footer p:last-child {
   margin: 0;
 }
 
-/* Typography */
-
-.header-title h1 {
-  color: #143774;
-  font-family: "Lora", serif;
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin: 0 auto 0.1em auto;
-}
-
-.header-title p {
-  color: #1792D2;
-  font-family: "Ubuntu", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: bold;
-  margin: 0 auto;
-}
-
-.post-date {
-  color: #707070;
-  font-size: 0.9rem;
-  font-weight: normal;
-  margin: 2em 0 1em 0;
-}
-
-.special-article .post-date {
-  margin-top: 1em;
-}
-
-.normal-article-secondary .post-date {
-  margin: 1em 0 0 0;
-  order: 2;
-}
-
-.post-title {
-  color: #143774;
-  font-size: 1.5rem;
-  font-family: "Lora", serif;
-  font-weight: normal;
-  margin: 0.5em 0;
-}
-
-.post-description {
-  color: #707070;
-  font-size: 1.1rem;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: normal;
-  line-height: 1.6;
-}
-
-.post-description a {
-  color: #1792D2;
-  text-decoration: none;
-}
-
-.post-description a:hover {
-  text-decoration: underline;
-}
-
-.decorations-introduction {
-  font-weight: bold;
-  color: #143774;
-}
-
-.continue-reading {
-  color: #1792D2;
-  font-family: "Ubuntu", sans-serif;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  display: inline-block;
-  margin-bottom: 1em;
-}
-
-.continue-reading:hover {
-  text-decoration: underline;
-}
-
-.normal-article .post-title {
-  margin-top: 0;
-}
-
-.normal-article .post-description {
-  margin: 1.5em 0;
-}
-
-.about-me-title {
-  color: #143774;
-  font-family: "Ubuntu", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3.6px;
-  font-weight: 900;
-  margin: 0 0 1.5em 0;
-  font-size: 1.1rem;
-  text-align: left;
-  width: 100%;
-}
-
-.about-me-paragraph {
-  color: #143774;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: normal;
-  margin: 1.5em 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  text-align: left;
-  width: 100%;
-}
-
-/* Images */
-
-.crop-special-image {
-  width: 100%;
-  height: 308px;
-  overflow: hidden;
-}
-
-.crop-special-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.crop-normal-image {
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
-}
-
-.crop-normal-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.about-me-card-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 1em;
-}
-
-/* Line */
-
-hr {
-  margin: 3em 0;
-  border: 0;
-  border-top: 1px solid #707070;
-  opacity: 0.3;
-  width: 100%;
-}
-
-/* Active page indicator */
-[aria-current="page"] {
-  border-bottom: 2px solid #707070;
-  padding-bottom: 0.25em;
-}
-
+/* ===== MOBILE VERSION ===== */
 @media (max-width: 768px) {
-  /* Header and Navigation */
   .container-nav {
     flex-direction: column;
     width: 90%;
     gap: 1.5em;
   }
-
-    .header-title {
-    width: 100%;
-  }
   
+  .header-title,
   .navigation {
     width: 100%;
   }
@@ -348,42 +336,32 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    padding: 0;
   }
   
-  .header-nav-list li {
-    margin: 0;
-  }
-
-    /* Main Container */
   .container {
     flex-direction: column;
     width: 90%;
     gap: 3em;
-    margin: 2em auto;
   }
   
-  .left-col, .right-col {
+  .left-col,
+  .right-col {
     width: 100%;
   }
   
-  /* Articles */
   .normal-article {
     flex-direction: column;
-    gap: 1em;
   }
   
-  .normal-article-main {
+  .normal-article-main,
+  .normal-article-secondary {
     width: 100%;
-    order: 1;
   }
   
   .normal-article-secondary {
-    width: 100%;
     flex-direction: row;
     align-items: center;
     gap: 1em;
-    order: 1;
   }
   
   .crop-normal-image {
@@ -394,27 +372,15 @@ hr {
   
   .normal-article-secondary .post-date {
     margin: 0;
-    font-size: 0.8rem;
   }
   
-  /* Special Article */
   .crop-special-image {
     height: 250px;
-  }
-  
-  /* Right Column Cards */
-  .right-col {
-    gap: 1.5em;
-  }
-  
-  .about-me-card, .recent-posts-card {
-    padding: 1em;
   }
   
   .short-recent-post {
     flex-direction: row;
     align-items: center;
-    gap: 1em;
   }
   
   .short-recent-post img {
@@ -422,39 +388,12 @@ hr {
     height: 80px;
     flex-shrink: 0;
   }
-  
-  .short-recent-post-title {
-    font-size: 0.9rem;
-  }
-  
-  /* Typography */
-  .post-title {
-    font-size: 1.3rem;
-  }
-  
-  .post-description {
-    font-size: 1rem;
-  }
-
-  .about-me-title, .about-me-paragraph {
-    text-align: center;
-  }
-  
-  hr {
-    margin: 2em 0;
-  }
-  
-  /* Footer */
-  footer {
-    padding: 2em 0;
-  }
 }
 
-@media (max-width:480px) {
-    .normal-article-secondary {
+@media (max-width: 480px) {
+  .normal-article-secondary {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5em;
   }
   
   .crop-normal-image {
@@ -477,7 +416,7 @@ hr {
   }
   
   .post-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .header-title h1 {

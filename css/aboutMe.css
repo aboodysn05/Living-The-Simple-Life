@@ -1,0 +1,117 @@
+/* ===== IMPORT HOMESTYLES.CSS ===== */
+@import url('homeStyles.css');
+
+/* ===== ABOUT ME PAGE SPECIFIC STYLES ===== */
+.about-me-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.about-me-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.about-me-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-me-content h2 {
+  color: #143774;
+  font-family: "Lora", serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 1em 0 0.5em;
+}
+
+.about-me-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.about-me-content h3 {
+  color: #1792D2;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1.5em 0 0.5em;
+}
+
+.about-me-content p {
+  color: #707070;
+  font-size: 1.1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+.about-me-content strong {
+  color: #143774;
+  font-weight: bold;
+}
+
+.right-col .about-me-card {
+  background-color: #F8F8F8;
+  padding: 1.5em;
+  border: 20px solid #EBEBEB;
+}
+
+.right-col .about-me-title {
+  color: #143774;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  font-weight: 900;
+  margin: 0 0 1.5em;
+  font-size: 1.1rem;
+}
+
+.right-col .about-me-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.right-col .about-me-paragraph {
+  color: #143774;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  margin: 1.5em 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-me-image {
+    height: 250px;
+  }
+  
+  .about-me-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-me-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .about-me-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-image {
+    height: 200px;
+  }
+  
+  .about-me-content h2 {
+    font-size: 1.3rem;
+  }
+}
