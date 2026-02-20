@@ -327,3 +327,160 @@ hr {
   border-bottom: 2px solid #707070;
   padding-bottom: 0.25em;
 }
+
+@media (max-width: 768px) {
+  /* Header and Navigation */
+  .container-nav {
+    flex-direction: column;
+    width: 90%;
+    gap: 1.5em;
+  }
+
+    .header-title {
+    width: 100%;
+  }
+  
+  .navigation {
+    width: 100%;
+  }
+  
+  .header-nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+  }
+  
+  .header-nav-list li {
+    margin: 0;
+  }
+
+    /* Main Container */
+  .container {
+    flex-direction: column;
+    width: 90%;
+    gap: 3em;
+    margin: 2em auto;
+  }
+  
+  .left-col, .right-col {
+    width: 100%;
+  }
+  
+  /* Articles */
+  .normal-article {
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .normal-article-main {
+    width: 100%;
+    order: 1;
+  }
+  
+  .normal-article-secondary {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    order: 1;
+  }
+  
+  .crop-normal-image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+  
+  .normal-article-secondary .post-date {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  /* Special Article */
+  .crop-special-image {
+    height: 250px;
+  }
+  
+  /* Right Column Cards */
+  .right-col {
+    gap: 1.5em;
+  }
+  
+  .about-me-card, .recent-posts-card {
+    padding: 1em;
+  }
+  
+  .short-recent-post {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .short-recent-post img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+  
+  .short-recent-post-title {
+    font-size: 0.9rem;
+  }
+  
+  /* Typography */
+  .post-title {
+    font-size: 1.3rem;
+  }
+  
+  .post-description {
+    font-size: 1rem;
+  }
+
+  .about-me-title, .about-me-paragraph {
+    text-align: center;
+  }
+  
+  hr {
+    margin: 2em 0;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 2em 0;
+  }
+}
+
+@media (max-width:480px) {
+    .normal-article-secondary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  
+  .crop-normal-image {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .short-recent-post {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .short-recent-post img {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .crop-special-image {
+    height: 200px;
+  }
+  
+  .post-title {
+    font-size: 1.2rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.3rem;
+  }
+}
