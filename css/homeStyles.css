@@ -4,10 +4,21 @@ body {
   margin: 0;
 }
 
-header {
+header, main, footer {
   width: 100%;
+}
+
+header, footer {
+  padding: 3.5em 0em;
+}
+
+header {
   background-color: #F8F8F8;
-  padding: 3.5em;
+}
+
+footer {
+  text-align: center;
+  background-color: #143774;
 }
 
 .header-title {
@@ -28,12 +39,31 @@ header {
 }
 
 .container-nav {
-  width: 80%;
+  width: 75%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
+  border: 1px solid #143774;
 }
 
+.container {
+  display: flex;
+  width: 75%;
+  margin: 4em auto;
+  border: 1px solid #143774;
+  justify-content: space-between;
+  gap: 5em;
+}
+
+.left-col {
+  width: 75%;
+  border: 1px solid red;
+}
+
+.right-col {
+  width: 25%;
+  border: 1px solid red;
+}
 
 /* Typography */
 
@@ -41,23 +71,87 @@ header {
   color: #143774;
   font-family: "Lora", serif;
   font-size: 1.5rem;
-  margin: 0 auto;
+  font-weight: normal;
+  margin: 0 auto 0.1em auto;
 }
 
 .header-title p {
   color: #1792D2;
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: bold;
   margin: 0 auto;
 }
 
 .header-nav-list a {
   color: #717171;
+  font-family: "Ubuntu", sans-serif;
   text-decoration: none;
   font-size: 1.1rem;
+  font-weight: normal;
 }
 
 .nav-item-1 {
   border-bottom: 2px solid #707070;
+}
+
+.post-date {
+  color: #707070;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.post-title {
+  color: #143774;
+  font-size: 1.5rem;
+  font-family: "Lora", serif;
+  font-weight: normal;
+}
+
+.post-description {
+  color: #707070;
+  font-size: 1.1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+}
+
+.post-description a {
+  color: #1792D2;
+}
+
+.decorations-introduction {
+  font-weight: bold;
+}
+
+.continue-reading {
+  color: #1792D2;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Images */
+
+.crop-image {
+  width: 100%;
+  height: 308px;
+  overflow: hidden;
+}
+
+.crop-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Line */
+
+hr {
+  margin: 2em 0;
+  color: #707070;
+  width: 100%;
 }
