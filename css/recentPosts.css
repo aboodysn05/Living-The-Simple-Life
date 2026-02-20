@@ -1,6 +1,35 @@
-body {
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;;
+/* ===== IMPORT HOMESTYLES.CSS ===== */
+@import url('homeStyles.css');
+
+/* ===== RECENT POSTS PAGE SPECIFIC STYLES ===== */
+.normal-article {
+  margin-bottom: 0;
 }
 
-@import url(css/homeStyles.css);
+.special-article {
+  margin-bottom: 2em;
+}
+
+.left-col article:first-child {
+  margin-top: 0;
+}
+
+.left-col .crop-special-image {
+  height: 250px; /* Slightly smaller than homepage featured */
+}
+
+hr {
+  margin: 2.5em 0;
+}
+
+@media (max-width: 768px) {
+  .left-col .crop-special-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-col .crop-special-image {
+    height: 180px;
+  }
+}
