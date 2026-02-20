@@ -152,12 +152,14 @@ footer p:last-child {
 
 .normal-article-main {
   width: 65%;
+  order: 2;
 }
 
 .normal-article-secondary {
   width: 30%;
   display: flex;
   flex-direction: column;
+  order: 1;
 }
 
 .crop-normal-image {
