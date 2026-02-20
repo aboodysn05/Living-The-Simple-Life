@@ -1,0 +1,63 @@
+/* Layout */
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #F8F8F8;
+  padding: 3.5em;
+}
+
+.header-title {
+  width: 25%;
+  text-align: center;
+}
+
+.navigation {
+  width: 40%;
+}
+
+.header-nav-list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.container-nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+
+/* Typography */
+
+.header-title h1 {
+  color: #143774;
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.header-title p {
+  color: #1792D2;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0 auto;
+}
+
+.header-nav-list a {
+  color: #717171;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-item-1 {
+  border-bottom: 2px solid #707070;
+}
